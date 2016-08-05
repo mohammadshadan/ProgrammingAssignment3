@@ -12,7 +12,7 @@ rankall <- function(outcome, num= "best") {
   statedata<-unique(data1$State)
   statedata<-statedata[order(statedata)]
   rows_state<-length(statedata)
-  print(statedata)
+  #print(statedata)
 
   if(!(outcome %in% c("heart attack", "heart failure", "pneumonia"))){
     print("invalid outcome")
@@ -81,6 +81,8 @@ rankall <- function(outcome, num= "best") {
 #      output_data<-rbind(output_data,temp_data2)
 #      #output_data<-rbind(output_data,temp_data[num,c(1,2)])
   
+  names(output_data)[1]<-"hospital"
+  names(output_data)[2]<-"state"
   
   output_data
 #  print(num)

@@ -48,7 +48,7 @@ rankhospital <- function(state, outcome, num) {
   #print(data3sort$Hospital.Name[1])
   if(num=="best") num<-1
   else if(num=="worst") num<-nrow(data3sort)
-  print(nrow(data3sort))
+  #print(nrow(data3sort))
   data3sort[num,1] 
   ## rate
 }
